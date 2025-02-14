@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Surpresa do nosso dia</title>
+      <link rel="stylesheet" href="./styles/styles.css">
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+         />
+   </head>
+   <body class="container">
+      <header class="cabecalho">
+         <nav>
+            <a class="cabecalho__links" href="#home">Home</a>
+            <a class="cabecalho__links" href="#cartinha">Cartinha</a>
+            <a class="cabecalho__links" href="#fotos">Nossas Fotos</a>
+         </nav>
+      </header>
+      <main class="apresentacao">
+         <section id="home" class="apresentacao__inicio">
+            <div class="apresentacao_texto">
+               <h1 class="apresentacao__inicio__titulo">Feliz Dia dos Namorados <strong>Fefe</strong></h1>
+               <h2 class="apresentacao__inicio__subtitulo">
+                  Não foi amor à primeira vista. Demorou 
+                  <strong>
+                     dez minutos completos.
+               </h2>
+            </div>
+            <img class="apresentacao__inicio__imagem" src="./assets/enforcando.png" alt="Leta me enforcando">
+         </section>
+         <section id="cartinha" class="apresentacao__meio">        
+         <div class="apresentacao__meio__conteudo">
+         <h1 class="apresentacao__meio__titulo">Cartinha</strong></h1>
+         <p class="apresentacao__meio__texto">Oii Fefe,<br><br>
+         Quando eu pensava em amor, imaginava alguém que me trouxesse paz, segurança e conforto. Alguém que se encaixasse perfeitamente na minha vida, sem precisar mudar nada. Então você apareceu… e mudou tudo.
+         Em vez de apenas paz, você trouxe intensidade. Em vez de conforto, me tirou da zona de segurança e me fez descobrir coisas novas sobre mim mesma. Você me mostrou um mundo diferente, repleto de possibilidades que eu nem sabia que queria explorar. E, ao invés de simplesmente me aceitar como sou, você me inspirou a ser ainda melhor.
+         Nós somos diferentes, mas essas diferenças não nos afastam – elas nos completam. Você é a peça que faltava em mim, aquele detalhe que transforma tudo. E eu espero, de coração, ser isso para você também.
+         O mais fácil seria te pedir para nunca mudar, para continuar sendo exatamente essa pessoa que amo tanto. Mas a verdade é que quero que você continue mudando, crescendo, descobrindo novas versões de si mesma – porque cada mudança sua também transforma minha vida.
+         <br><br>Te amo bb! 💜                
+         <br><br>Com amor,Vivi
+         </p>
+         </div>
+         <div >
+         <p class="apresentacao__meio__texto__imagem">Eu tentando lembrar o que você me fala</p>
+         <img class="apresentacao__meio__imagem" src="./assets/cabeca_pensando.gif" alt="cabeca_pensando">
+         <p class="apresentacao__meio__texto__imagem">Você logo após</p>
+         <img class="apresentacao__meio__imagem2" src="./assets/minions_brigando.gif" alt="minions-punch">
+         </div>
+         </section>
+         
+         <section id="fotos" class="fotos">
+            <h1 class="fotos__titulo">Nossas Fotos</h1>
+            <p class="amor-contador">Eu te amo há <span id="contador"></span></p>
+            <div class="container__fotos">
+               <img class="foto" src="./assets/vv-e-fefe1.jpeg" alt="">
+               <img class="foto" src="./assets/vv-e-fefe2.jpeg" alt="">
+               <img class="foto" src="./assets/vv-e-fefe3.jpeg" alt="">
+               <img class="foto" src="./assets/sem-fernanda.jpg" alt="">
+            </div>
+         </section>
+      </main>
+      <!-- <button onclick="mostrarSurpresa()">
+      <i class="fas fa-arrow-pointer"></i> Clique aqui     
+      </button> -->
+      <button onclick="mostrarSurpresa()" class="accordion">
+        <i class="fas fa-arrow-pointer"></i> Clique aqui
+      </button>
+      <div class="accordion-content">
+        <p class="frase-romantica">
+          Feliz nosso dia, meu amor! Eu comprei ingressos para o show da
+          Anavitória, e mal posso esperar para vivermos esse momento juntas!
+        </p>
+        <a href="/assets/ingresso.pdf" class="btn-download" download>
+          <i class="fas fa-gift"></i> Baixar Ingresso
+        </a>
+        <div class="youtube-container">
+            <iframe width="420" height="345"
+            src="https://www.youtube-nocookie.com/embed/videoseries?list=OLAK5uy_m-oAvxplq0RhODVr4YePmho24LVbnc3j4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="fullscreen">
+          </iframe>
+          
+        </div>
+      </div>
+        
+      </div>
+      <footer class="rodape">
+         <p> De Vivi para Fefe</p>
+      </footer>
+      <script src="./script.js"></script>
+   </body>
+</html>
