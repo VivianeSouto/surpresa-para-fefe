@@ -104,8 +104,11 @@ strong {
   text-align: center;
 
   font-family: var(--fonte-secundaria);
-  font-size: 2.25rem;
+  font-size: 2rem;
   color: var(--cor-destaque);
+  max-width: 90%; /* Garante que o texto não ultrapasse a largura */
+  word-wrap: break-word; /* Quebra palavras longas */
+  overflow-wrap: break-word; /* Suporte extra para quebra de palavras */
 }
 
 .apresentacao__meio__imagem {
@@ -142,9 +145,9 @@ strong {
 }
 
 .foto {
-  border-radius: 16px;
-  height: 31.25rem;
-  width: 31.25rem;
+  width: 100%;
+  max-width: 31.25rem; /* Valor máximo */
+  height: auto;
 }
 
 .foto:hover {
@@ -153,7 +156,6 @@ strong {
 }
 .frase-romantica {
   font-size: 18px;
-  /* color: #333; */
   color: var(--cor-terciaria);
   margin-top: 20px;
   text-align: center;
@@ -171,16 +173,18 @@ button {
   align-items: center;
   justify-content: center;
   margin: 20px auto; /* Centraliza horizontalmente */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button i {
   margin-right: 10px; /* Ajuste no espaçamento do ícone */
 }
 
-button:hover,
-.btn-download:hover {
+button:hover {
   background-color: #d81b60;
+  transform: scale(1.05); /* Aumenta levemente o tamanho */
 }
+
 .surpresa-container {
   background-color: #850e35; /* Cor de fundo ao redor do iframe */
   padding: 20px; /* Espaço ao redor */
@@ -235,7 +239,6 @@ button:hover,
   width: 100%;
   text-align: center;
   transition: background-color 0.3s ease;
-  /* margin-top: 20px; */
   margin: 20px auto;
 }
 
@@ -246,11 +249,28 @@ button:hover,
 .accordion-content {
   display: none;
   overflow: hidden;
-  padding: 15px;
-  border-radius: 10px;
-  /* background-color: #fff0f6; */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: max-height 0.4s ease-out;
+  max-height: 0;
   margin-top: 10px;
+}
+
+.accordion-content.show {
+  display: block;
+  max-height: 1000px; /* Ajuste conforme o tamanho do conteúdo */
+}
+
+@media (max-width: 768px) {
+  .apresentacao__meio__texto__imagem {
+    font-size: 1.5rem; /* Reduz um pouco o tamanho da fonte */
+    max-width: 100%; /* Garante que o texto se ajuste */
+    padding: 0 10px; /* Adiciona um pequeno espaçamento para evitar cortes */
+  }
+
+  .apresentacao__meio {
+    flex-direction: column; /* Empilha os elementos verticalmente no mobile */
+    align-items: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 1200px) {

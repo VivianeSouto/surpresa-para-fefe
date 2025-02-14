@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function mostrarSurpresa() {
-    document.getElementById("surpresa").style.display = "block";
+    const surpresa = document.getElementById("surpresa");
+    surpresa.classList.toggle("show");
 }
 
 function contarTempo() {
@@ -15,7 +16,9 @@ function contarTempo() {
     const horas = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // Calcular horas
     const minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)); // Calcular minutos
 
-    const contador = `${dias} dias, ${horas} horas, ${minutos} minutos`;
+    
+    const segundos = Math.floor((diff % (1000 * 60)) / 1000); // Calcular segundos
+    const contador = `${dias} dias, ${horas} horas, ${minutos} minutos, ${segundos} segundos`;
     document.getElementById("contador").textContent = contador;
 }
 
